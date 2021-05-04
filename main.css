@@ -1,0 +1,105 @@
+:root {
+    --text-color: #aaa;
+    --background-color: #555;
+    --accent-color: #3f94b6;
+}
+
+* {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: color, background-color, ease-in-out 250ms;
+}
+
+body {
+    background-color: var(--background-color);
+    margin-top: 50px;
+}
+
+.content {
+    margin: 0 auto;
+    width: 80%;
+    /* border: 2px var(--accent-color) solid; */
+    border-radius: 7px;
+    padding: 30px;
+    max-width: 1000px;
+}
+
+h1 {
+    font-size: 40px;
+    color: var(--accent-color);
+}
+
+#description {
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+#description::before {
+    content: ' ';
+    margin-right: 45px;
+
+}
+
+#switch-container {
+    padding-right: 10px;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: white;
+}
+
+.form-check-input {
+    /* border-color: var(--accent-color); */
+    border-width: 2px;
+}
+
+.link-list {
+    list-style: none;
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+    bottom: 1px;
+    padding: 0;
+}
+
+.link {
+    border-radius: 10px;
+    border: 2px var(--text-color) solid;
+    text-align: center;
+}
+
+.link > a {
+    text-decoration: none;
+    color: var(--accent-color);
+    background: none;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.link:hover, .link:focus {
+    background-color: var(--accent-color);
+}
+
+.link:hover > a, .link:focus > a {
+    color: var(--text-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+@media only screen and (max-width: 1175px) {
+    .link-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .link {
+        padding: 5px;
+        margin: 5px;
+        width: 90%;
+    }
+}

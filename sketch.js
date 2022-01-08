@@ -1,11 +1,11 @@
 let mode = "Dark";
 let root;
-let light = {
+const light = {
     text: "#454545",
     bg: "#cfcfcf",
     accent: "#197ca9"
 };
-let dark = {
+const dark = {
     text: "#ddd",
     bg: "#333",
     accent: "#3f94b6"
@@ -15,7 +15,17 @@ $(() => {
     root = document.documentElement;
     $("#switch").click(switchColorMode);
     switchColorMode();
+    showLinks(links);
 });
+
+function showLinks(links) {
+    const list = $("#link-list")
+    for (link of links) {
+        $(list).append(
+            `<a target="_blank" href="${link.url}"><li class="link">${link.text}</li></a>`
+        )
+    }
+}
 
 function switchColorMode() {
     $("#switch-label").html(mode);

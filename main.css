@@ -36,7 +36,7 @@ h1 {
 }
 
 #description::before {
-    content: ' ';
+    /* content: ' '; */
     margin-right: 45px;
 
 }
@@ -68,21 +68,21 @@ h1 {
     border-radius: 10px;
     border: 2px var(--text-color) solid;
     text-align: center;
+    padding: 10px;
 }
 
-.link > a {
+a {
     text-decoration: none;
     color: var(--accent-color);
     background: none;
-    padding: 10px;
     font-size: 25px;
 }
 
-.link:hover, .link:focus {
+a > .link:hover, a > .link:focus {
     background-color: var(--accent-color);
 }
 
-.link:hover > a, .link:focus > a {
+a:hover > .link, a:focus > .link {
     color: var(--text-color);
 }
 
@@ -97,7 +97,7 @@ h1 {
         width: 100%;
     }
 
-    .link {
+    a {
         padding: 5px;
         margin: 5px;
         width: 90%;

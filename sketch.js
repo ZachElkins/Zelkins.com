@@ -1,9 +1,9 @@
 let mode = "Dark";
 let root;
 let light = {
-    text: "#222",
-    bg: "#eaeaea",
-    accent: "#49bce9"
+    text: "#454545",
+    bg: "#cfcfcf",
+    accent: "#197ca9"
 };
 let dark = {
     text: "#ddd",
